@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Textures",
+        "request": "launch",
+        "mainClass": "de.tum.cit.aet.valleyday.texture.Textures",
+        "projectName": "core"
+      },
+      {
+        "name": "Valley Day",
+        "type": "java",
+        "request": "launch",
+        "mainClass": "de.tum.cit.aet.valleyday.DesktopLauncher"
+      }
+    ]
+}
