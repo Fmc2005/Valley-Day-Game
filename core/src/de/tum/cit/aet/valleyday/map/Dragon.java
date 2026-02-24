@@ -70,8 +70,8 @@ public class Dragon extends Animal {
     }
 
     public void tick(float frameTime) {
-        getStandingTile().setX(Math.round(getX()+0.2f));
-        getStandingTile().setY((int)(getY()));
+        getStandingTile().setX(Math.round(getX()));
+        getStandingTile().setY(Math.round(getY()));
 
         fireTimer += frameTime;
         attackcooldown += frameTime;

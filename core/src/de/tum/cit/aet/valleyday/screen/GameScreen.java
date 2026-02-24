@@ -382,8 +382,8 @@ public class GameScreen implements Screen {
         float x = dragon.getX() * TILE_SIZE_PX * SCALE;
         float y = dragon.getY() * TILE_SIZE_PX * SCALE;
         // Additionally scale everything by the game scale
-        float width = texture.getRegionWidth() * SCALE*3/2/SUPERSMALLSCALE;
-        float height = texture.getRegionHeight() * SCALE*3/2/SUPERSMALLSCALE;
+        float width = texture.getRegionWidth() * SCALE*2/2/SUPERSMALLSCALE;
+        float height = texture.getRegionHeight() * SCALE*2/2/SUPERSMALLSCALE;
         spriteBatch.draw(texture, x-11, y-10, width, height);
     }
 

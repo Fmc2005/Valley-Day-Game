@@ -19,6 +19,7 @@ import de.tum.cit.aet.valleyday.audio.MusicTrack;
  */
 public class SettingsScreen implements Screen {
     private final Stage stage;
+    private int difficulty;
     /**
      * constructor for settings screen
      * @param game game that can show that screen
@@ -72,11 +73,11 @@ public class SettingsScreen implements Screen {
         table.row();
         table.add().colspan(3).expandX().padBottom(30).row();
         TextButton setEasy = new TextButton("easy", game.getSkin());
-       if(game.difficulty == 0){setEasy.setColor(Color.GREEN);}
+       if(game.difficultyCheck == 0){setEasy.setColor(Color.GREEN);}
         TextButton setMedium = new TextButton("medium", game.getSkin());
-        if(game.difficulty == 1){setMedium.setColor(Color.ORANGE);}
+        if(game.difficultyCheck == 1){setMedium.setColor(Color.ORANGE);}
         TextButton setHard = new TextButton("hard", game.getSkin());
-        if(game.difficulty == 2){setHard.setColor(Color.RED);}
+        if(game.difficultyCheck == 2){setHard.setColor(Color.RED);}
         table.add(setEasy).width(200).pad(10).padBottom(50);
         table.add(setMedium).width(200).pad(10).padBottom(50);
         table.add(setHard).width(200).pad(10).padBottom(50);
@@ -91,7 +92,7 @@ public class SettingsScreen implements Screen {
              */
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                game.difficulty = 0;
+                game.difficultyCheck = 0;
                 game.goToNewGame();
                 setEasy.setColor(Color.GREEN);
                 setMedium.setColor(Color.LIGHT_GRAY);
@@ -106,7 +107,7 @@ public class SettingsScreen implements Screen {
              */
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                game.difficulty = 1;
+                game.difficultyCheck = 1;
                 game.goToNewGame();
                 setEasy.setColor(Color.LIGHT_GRAY);
                 setMedium.setColor(Color.ORANGE);
@@ -121,9 +122,7 @@ public class SettingsScreen implements Screen {
              */
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                game.difficulty = 2;
-                game.goToNewGame();
-  
+                game.difficultyCheck = 2;
                 setEasy.setColor(Color.LIGHT_GRAY);
                 setMedium.setColor(Color.LIGHT_GRAY);
                 setHard.setColor(Color.RED);

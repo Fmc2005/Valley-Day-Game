@@ -29,6 +29,7 @@ public class ValleyDayGame extends Game{
      * Sprite Batch for rendering game elements.
      * This eats a lot of memory, so we only want one of these.
      */
+    public int difficultyCheck =0;
     public int difficulty;
     private boolean muted;
     public boolean isMuted() {
@@ -78,9 +79,9 @@ public class ValleyDayGame extends Game{
     @Override
     public void create() {
         this.spriteBatch = new SpriteBatch(); // Create SpriteBatch for rendering
-        this.skin = new Skin(Gdx.files.internal("skin/craftacular/craftacular-ui.json")); // Load UI skin
+        this.skin = new Skin(Gdx.files.internal("skin/craftacular/craftacular-ui.json"));
+        difficulty = difficultyCheck; // Load UI skin
         this.map = new GameMap(this);
-        difficulty = 0;
         // Create a new game map (you should change this to load the map from a file instead)
         muted = false;
         SoundFX.loadAll();
@@ -102,6 +103,7 @@ public class ValleyDayGame extends Game{
      * Switches to the game screen.
      */
     public void goToGame() {
+        if (difficulty != difficultyCheck) {goToNewGame();return;}
         
         MusicTrack.BACKGROUND.mute();
         MusicTrack.FIXYOU.mute();

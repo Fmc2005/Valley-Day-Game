@@ -82,7 +82,7 @@ public class Player implements Drawable {
         cropcooldown =5;
         playerhp =3;
         if (map.getGame().difficulty == 0) playerhp = 5;
-        if (map.getGame().difficulty == 2) playerhp = 1;
+        if (map.getGame().difficulty == 2) playerhp = 2;
         hpcooldown = 0;
         victorypoints =0;
         firePotionTimer = 15;
