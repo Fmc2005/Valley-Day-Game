@@ -92,7 +92,7 @@ public class SettingsScreen implements Screen {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 game.difficulty = 0;
-         
+                game.goToNewGame();
                 setEasy.setColor(Color.GREEN);
                 setMedium.setColor(Color.LIGHT_GRAY);
                 setHard.setColor(Color.LIGHT_GRAY);
@@ -107,7 +107,7 @@ public class SettingsScreen implements Screen {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 game.difficulty = 1;
-     
+                game.goToNewGame();
                 setEasy.setColor(Color.LIGHT_GRAY);
                 setMedium.setColor(Color.ORANGE);
                 setHard.setColor(Color.LIGHT_GRAY);
@@ -122,6 +122,7 @@ public class SettingsScreen implements Screen {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 game.difficulty = 2;
+                game.goToNewGame();
   
                 setEasy.setColor(Color.LIGHT_GRAY);
                 setMedium.setColor(Color.LIGHT_GRAY);
